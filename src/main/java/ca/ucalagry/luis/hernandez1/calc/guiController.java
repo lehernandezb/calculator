@@ -1,5 +1,6 @@
 package ca.ucalagry.luis.hernandez1.calc;
 
+import ca.ucalagry.luis.hernandez1.calc.objects.characters;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -102,12 +103,14 @@ public class guiController {
 
     @FXML
     void dot(ActionEvent event) {
-
+        String dot = ".";
+        new characters(dot);
     }
 
     @FXML
     void eight(ActionEvent event) {
-
+        String eight = "8";
+        new characters(eight);
     }
 
     @FXML
@@ -117,12 +120,14 @@ public class guiController {
 
     @FXML
     void five(ActionEvent event) {
-
+        String five = "5";
+        new characters(five);
     }
 
     @FXML
     void four(ActionEvent event) {
-
+        String four = "4";
+        new characters(four);
     }
 
     @FXML
@@ -142,6 +147,8 @@ public class guiController {
 
     @FXML
     void nine(ActionEvent event) {
+        String nine = "9";
+        new characters(nine);
 
     }
 
@@ -152,8 +159,10 @@ public class guiController {
 
     @FXML
     void one(ActionEvent event) {
-
+        String one = "1";
+        new characters(one);
     }
+
 
     @FXML
     void percent(ActionEvent event) {
@@ -177,27 +186,33 @@ public class guiController {
 
     @FXML
     void seven(ActionEvent event) {
+        String seven = "7";
+        new characters(seven);
 
     }
 
     @FXML
     void six(ActionEvent event) {
-
+        String six = "6";
+        new characters(six);
     }
 
     @FXML
     void three(ActionEvent event) {
-
+        String three = "3";
+        new characters(three);
     }
 
     @FXML
     void two(ActionEvent event) {
-
+        String two = "2";
+        new characters(two);
     }
 
     @FXML
     void zero(ActionEvent event) {
-
+        String zero = "0";
+        new characters(zero);
     }
 
 }
