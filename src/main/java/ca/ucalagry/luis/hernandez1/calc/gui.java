@@ -1,16 +1,27 @@
 package ca.ucalagry.luis.hernandez1.calc;
 
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.stage.Stage;
+
+import java.io.IOException;
+
 
 public class gui extends Application {
 
-    public static void main(String[] args) {
-        launch(args);
+    @Override
+    public void start(Stage primaryStage) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("gui.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 400, 600);
+        Stage stage = new Stage();
+        stage.setTitle("Calc");
+        stage.setResizable(false);
+        stage.setScene(scene);
+        stage.show();
     }
 
-    @Override
-    public void start(Stage primaryStage) {
-
+    public static void main(String[] args) {
+        launch(args);
     }
 }
