@@ -104,13 +104,15 @@ public class guiController {
     @FXML
     void dot(ActionEvent event) {
         String dot = ".";
-        new characters(dot);
+        characters character = new characters(dot);
+        characters.add(character);
     }
 
     @FXML
     void eight(ActionEvent event) {
         String eight = "8";
-        new characters(eight);
+        characters character = new characters(eight);
+        characters.add(character);
     }
 
     @FXML
@@ -121,13 +123,15 @@ public class guiController {
     @FXML
     void five(ActionEvent event) {
         String five = "5";
-        new characters(five);
+        characters character = new characters(five);
+        characters.add(character);
     }
 
     @FXML
     void four(ActionEvent event) {
         String four = "4";
-        new characters(four);
+        characters character = new characters(four);
+        characters.add(character);
     }
 
     @FXML
@@ -148,7 +152,8 @@ public class guiController {
     @FXML
     void nine(ActionEvent event) {
         String nine = "9";
-        new characters(nine);
+        characters character = new characters(nine);
+        characters.add(character);
 
     }
 
@@ -160,7 +165,8 @@ public class guiController {
     @FXML
     void one(ActionEvent event) {
         String one = "1";
-        new characters(one);
+        characters character = new characters(one);
+        characters.add(character);
     }
 
 
@@ -187,32 +193,37 @@ public class guiController {
     @FXML
     void seven(ActionEvent event) {
         String seven = "7";
-        new characters(seven);
+        characters character = new characters(seven);
+        characters.add(character);
 
     }
 
     @FXML
     void six(ActionEvent event) {
         String six = "6";
-        new characters(six);
+        characters character = new characters(six);
+        characters.add(character);
     }
 
     @FXML
     void three(ActionEvent event) {
         String three = "3";
-        new characters(three);
+        characters character = new characters(three);
+        characters.add(character);
     }
 
     @FXML
     void two(ActionEvent event) {
         String two = "2";
-        new characters(two);
+        characters character = new characters(two);
+        characters.add(character);
     }
 
     @FXML
     void zero(ActionEvent event) {
         String zero = "0";
-        new characters(zero);
+        characters character = new characters(zero);
+        characters.add(character);
     }
 
 }

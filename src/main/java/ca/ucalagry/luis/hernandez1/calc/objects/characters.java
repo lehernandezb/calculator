@@ -9,10 +9,13 @@ public class characters {
 
     public characters(String number) {
         this.character = number;
-        characters.add(this.character);
     }
 
     public static void clearArrayList() {
         characters.clear();
+    }
+
+    public static void add(characters character) {
+        characters.add(character.character);
     }
 }
