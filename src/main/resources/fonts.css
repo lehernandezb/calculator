@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.text-area {
+    -fx-font-size: 28px;
+    -fx-font-family: "Press Start 2P";
+    -fx-background-image: "";
+    -fx-text-alignment: center;
+}

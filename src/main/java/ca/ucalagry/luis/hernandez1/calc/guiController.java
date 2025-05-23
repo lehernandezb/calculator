@@ -1,11 +1,13 @@
 package ca.ucalagry.luis.hernandez1.calc;
 
 import ca.ucalagry.luis.hernandez1.calc.objects.characters;
+import ca.ucalagry.luis.hernandez1.calc.objects.operations;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.text.Font;
 
 public class guiController {
 
@@ -93,11 +95,13 @@ public class guiController {
 
     @FXML
     void display(MouseEvent event) {
-
     }
 
     @FXML
     void divide(ActionEvent event) {
+        String divide = "÷";
+        operations operation = new operations(divide);
+        operations.add(operation);
 
     }
 
@@ -113,6 +117,7 @@ public class guiController {
         String eight = "8";
         characters character = new characters(eight);
         characters.add(character);
+        display.appendText(eight);
     }
 
     @FXML
@@ -125,6 +130,7 @@ public class guiController {
         String five = "5";
         characters character = new characters(five);
         characters.add(character);
+        display.appendText(five);
     }
 
     @FXML
@@ -132,6 +138,7 @@ public class guiController {
         String four = "4";
         characters character = new characters(four);
         characters.add(character);
+        display.appendText(four);
     }
 
     @FXML
@@ -141,11 +148,17 @@ public class guiController {
 
     @FXML
     void minus(ActionEvent event) {
+        String minus = "-";
+        operations operation = new operations(minus);
+        operations.add(operation);
 
     }
 
     @FXML
     void multiply(ActionEvent event) {
+        String multiply = "*";
+        operations operation = new operations(multiply);
+        operations.add(operation);
 
     }
 
@@ -154,6 +167,7 @@ public class guiController {
         String nine = "9";
         characters character = new characters(nine);
         characters.add(character);
+        display.appendText(nine);
 
     }
 
@@ -167,16 +181,23 @@ public class guiController {
         String one = "1";
         characters character = new characters(one);
         characters.add(character);
+        display.appendText(one);
     }
 
 
     @FXML
     void percent(ActionEvent event) {
+        String percent = "%";
+        operations operation = new operations(percent);
+        operations.add(operation);
 
     }
 
     @FXML
     void plus(ActionEvent event) {
+        String plus = "+";
+        operations operation = new operations(plus);
+        operations.add(operation);
 
     }
 
@@ -195,6 +216,7 @@ public class guiController {
         String seven = "7";
         characters character = new characters(seven);
         characters.add(character);
+        display.appendText(seven);
 
     }
 
@@ -203,6 +225,7 @@ public class guiController {
         String six = "6";
         characters character = new characters(six);
         characters.add(character);
+        display.appendText(six);
     }
 
     @FXML
@@ -210,6 +233,7 @@ public class guiController {
         String three = "3";
         characters character = new characters(three);
         characters.add(character);
+        display.appendText(three);
     }
 
     @FXML
@@ -217,6 +241,7 @@ public class guiController {
         String two = "2";
         characters character = new characters(two);
         characters.add(character);
+        display.appendText(two);
     }
 
     @FXML
@@ -224,6 +249,7 @@ public class guiController {
         String zero = "0";
         characters character = new characters(zero);
         characters.add(character);
+        display.appendText(zero);
     }
 
 }

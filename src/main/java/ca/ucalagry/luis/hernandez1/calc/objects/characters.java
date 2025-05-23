@@ -18,4 +18,8 @@ public class characters {
     public static void add(characters character) {
         characters.add(character.character);
     }
+
+    public static void remove(characters character) {
+        characters.remove(character.character);
+    }
 }

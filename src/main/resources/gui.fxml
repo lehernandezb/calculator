@@ -11,20 +11,24 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ca.ucalagry.luis.hernandez1.calc.guiController">
+<AnchorPane prefHeight="600.0" prefWidth="400.0" stylesheets="@fonts.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ca.ucalagry.luis.hernandez1.calc.guiController">
    <children>
       <ImageView fitHeight="600.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Calc_Background.png" />
          </image>
       </ImageView>
-      <VBox layoutX="32.0" layoutY="28.0" prefHeight="543.0" prefWidth="336.0">
+      <VBox layoutX="32.0" layoutY="28.0" prefHeight="543.0" prefWidth="336.0" stylesheets="@fonts.css">
          <children>
-            <TextArea fx:id="display" onDragDetected="#display" prefHeight="203.0" prefWidth="336.0">
+            <TextArea id="display" fx:id="display" editable="false" onDragDetected="#display" prefHeight="203.0" prefWidth="336.0" stylesheets="@fonts.css">
                <padding>
                   <Insets bottom="10.0" />
                </padding>
+               <font>
+                  <Font name="PressStart" size="19.0" />
+               </font>
             </TextArea>
             <GridPane hgap="10.0" prefHeight="322.0" prefWidth="336.0" vgap="10.0">
               <columnConstraints>
