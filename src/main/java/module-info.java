@@ -1,6 +1,7 @@
 module ca.ucalagry.luis.hernandez1.calc {
     requires javafx.controls;
     requires javafx.fxml;
+    requires jdk.incubator.vector;
 
 
     opens ca.ucalagry.luis.hernandez1.calc to javafx.fxml;

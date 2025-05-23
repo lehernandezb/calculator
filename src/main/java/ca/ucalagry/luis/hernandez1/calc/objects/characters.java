@@ -22,4 +22,8 @@ public class characters {
     public static void remove(characters character) {
         characters.remove(character.character);
     }
+
+    public static void removeLastCharacter() {
+        if (!characters.isEmpty()) {characters.removeLast();}
+    }
 }

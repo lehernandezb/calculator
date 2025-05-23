@@ -7,9 +7,12 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.text.Font;
 
 public class guiController {
+
+    characters tempCharacter;
+    operations tempOperation;
+    Boolean characterSelected = null;
 
     @FXML
     private Button clear;
@@ -83,14 +86,47 @@ public class guiController {
     @FXML
     private Button zero;
 
-    @FXML
-    void clear(ActionEvent event) {
+    private void addCharacter(String variable) {
+        characters character = new characters(variable);
+        tempCharacter = character;
+        characters.add(character);
+        display.appendText(variable);
+        characterSelected = true;
+    }
+
+    public void addOperation(String variable) {
+        operations operation = new operations(variable);
+        tempOperation = operation;
+        operations.add(operation);
+        display.appendText(variable);
+        characterSelected = false;
 
     }
 
     @FXML
-    void delete(ActionEvent event) {
+    void clear(ActionEvent event) {
+        display.clear();
+        characters.clearArrayList();
+        operations.clearArrayList();
+    }
 
+    @FXML
+    void delete(ActionEvent event) {
+        if (characterSelected) {
+            characters.removeLastCharacter();
+            String text = display.getText();
+            int length = text.length();
+            if (length > 0) {
+                display.deleteText(length - 1, length);
+            }
+        } else {
+            operations.removeLastOperation();
+            String text = display.getText();
+            int length = text.length();
+            if (length > 0) {
+                display.deleteText(length - 1, length);
+            }
+        }
     }
 
     @FXML
@@ -99,25 +135,17 @@ public class guiController {
 
     @FXML
     void divide(ActionEvent event) {
-        String divide = "÷";
-        operations operation = new operations(divide);
-        operations.add(operation);
-
+        addCharacter("÷");
     }
 
     @FXML
     void dot(ActionEvent event) {
-        String dot = ".";
-        characters character = new characters(dot);
-        characters.add(character);
+        addCharacter(".");
     }
 
     @FXML
     void eight(ActionEvent event) {
-        String eight = "8";
-        characters character = new characters(eight);
-        characters.add(character);
-        display.appendText(eight);
+        addCharacter("8");
     }
 
     @FXML
@@ -127,47 +155,34 @@ public class guiController {
 
     @FXML
     void five(ActionEvent event) {
-        String five = "5";
-        characters character = new characters(five);
-        characters.add(character);
-        display.appendText(five);
+        addCharacter("5");
     }
 
     @FXML
     void four(ActionEvent event) {
-        String four = "4";
-        characters character = new characters(four);
-        characters.add(character);
-        display.appendText(four);
+        addCharacter("4");
     }
 
     @FXML
     void left(ActionEvent event) {
-
+        addCharacter("(");
     }
 
     @FXML
     void minus(ActionEvent event) {
-        String minus = "-";
-        operations operation = new operations(minus);
-        operations.add(operation);
+        addOperation("-");
 
     }
 
     @FXML
     void multiply(ActionEvent event) {
-        String multiply = "*";
-        operations operation = new operations(multiply);
-        operations.add(operation);
+        addOperation("x");
 
     }
 
     @FXML
     void nine(ActionEvent event) {
-        String nine = "9";
-        characters character = new characters(nine);
-        characters.add(character);
-        display.appendText(nine);
+        addCharacter("9");
 
     }
 
@@ -178,26 +193,19 @@ public class guiController {
 
     @FXML
     void one(ActionEvent event) {
-        String one = "1";
-        characters character = new characters(one);
-        characters.add(character);
-        display.appendText(one);
+        addCharacter("1");
     }
 
 
     @FXML
     void percent(ActionEvent event) {
-        String percent = "%";
-        operations operation = new operations(percent);
-        operations.add(operation);
+        addOperation("%");
 
     }
 
     @FXML
     void plus(ActionEvent event) {
-        String plus = "+";
-        operations operation = new operations(plus);
-        operations.add(operation);
+        addOperation("+");
 
     }
 
@@ -208,48 +216,33 @@ public class guiController {
 
     @FXML
     void right(ActionEvent event) {
-
+        addCharacter(")");
     }
 
     @FXML
     void seven(ActionEvent event) {
-        String seven = "7";
-        characters character = new characters(seven);
-        characters.add(character);
-        display.appendText(seven);
+        addCharacter("7");
 
     }
 
     @FXML
     void six(ActionEvent event) {
-        String six = "6";
-        characters character = new characters(six);
-        characters.add(character);
-        display.appendText(six);
+        addCharacter("6");
     }
 
     @FXML
     void three(ActionEvent event) {
-        String three = "3";
-        characters character = new characters(three);
-        characters.add(character);
-        display.appendText(three);
+        addCharacter("3");
     }
 
     @FXML
     void two(ActionEvent event) {
-        String two = "2";
-        characters character = new characters(two);
-        characters.add(character);
-        display.appendText(two);
+        addCharacter("2");
     }
 
     @FXML
     void zero(ActionEvent event) {
-        String zero = "0";
-        characters character = new characters(zero);
-        characters.add(character);
-        display.appendText(zero);
+        addCharacter("0");
     }
 
 }

@@ -19,4 +19,12 @@ public class operations {
     public static ArrayList<String> getOperations() {
         return operations;
     }
+
+    public static void clearArrayList() {
+        operations.clear();
+    }
+
+    public static void removeLastOperation() {
+        if (!operations.isEmpty()) {operations.removeLast();}
+    }
 }
