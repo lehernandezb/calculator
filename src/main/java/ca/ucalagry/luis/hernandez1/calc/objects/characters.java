@@ -26,4 +26,21 @@ public class characters {
     public static void removeLastCharacter() {
         if (!characters.isEmpty()) {characters.removeLast();}
     }
+
+    public static void removeFirstCharacter() {
+        if (!characters.isEmpty()) {characters.removeFirst();}
+    }
+
+    public static Boolean plusOrMinusCheck(Boolean positive){
+        if (!characters.isEmpty() && positive) {
+            characters.addFirst("-");
+            positive = false;
+            return false;
+        } else if (!characters.isEmpty()) {
+            characters.removeLast();
+            positive = true;
+            return true;
+        }
+        return null;
+    }
 }

@@ -13,6 +13,7 @@ public class guiController {
     characters tempCharacter;
     operations tempOperation;
     Boolean characterSelected = null;
+    Boolean positive = true;
 
     @FXML
     private Button clear;
@@ -171,13 +172,11 @@ public class guiController {
     @FXML
     void minus(ActionEvent event) {
         addOperation("-");
-
     }
 
     @FXML
     void multiply(ActionEvent event) {
         addOperation("x");
-
     }
 
     @FXML
@@ -188,7 +187,7 @@ public class guiController {
 
     @FXML
     void off(ActionEvent event) {
-
+        System.exit(0);
     }
 
     @FXML
@@ -211,7 +210,14 @@ public class guiController {
 
     @FXML
     void plusOrMinus(ActionEvent event) {
-
+        if (Boolean.TRUE.equals(characters.plusOrMinusCheck(positive))) {
+            display.deleteText(0, 1);
+            positive = true;
+        } else if (Boolean.FALSE.equals(characters.plusOrMinusCheck(positive))) {
+            String text = display.getText();
+            display.setText("-" + text);
+            positive = false;
+        }
     }
 
     @FXML
