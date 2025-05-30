@@ -20,7 +20,7 @@ public class gui extends Application {
         scene.getStylesheets().add(css);
 
         Stage stage = new Stage();
-        stage.setTitle("Calc");
+        stage.setTitle("PokiCalc");
         stage.setResizable(false);
         stage.setScene(scene);
         stage.show();

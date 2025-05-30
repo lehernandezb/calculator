@@ -3,6 +3,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -22,14 +23,12 @@
       </ImageView>
       <VBox layoutX="32.0" layoutY="28.0" prefHeight="543.0" prefWidth="336.0" stylesheets="@fonts.css">
          <children>
-            <TextArea id="display" fx:id="display" editable="false" onDragDetected="#display" prefHeight="203.0" prefWidth="336.0" stylesheets="@fonts.css">
-               <padding>
-                  <Insets bottom="10.0" />
-               </padding>
+            <TextArea id="display" fx:id="display" editable="false" focusTraversable="false" onDragDetected="#display" prefHeight="184.0" prefWidth="336.0" stylesheets="@fonts.css">
                <font>
                   <Font name="PressStart" size="19.0" />
                </font>
             </TextArea>
+            <Label prefHeight="42.0" prefWidth="336.0" />
             <GridPane hgap="10.0" prefHeight="322.0" prefWidth="336.0" vgap="10.0">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -46,46 +45,32 @@
               </rowConstraints>
                <children>
                   <ButtonBar prefHeight="40.0" prefWidth="200.0" />
-                  <Button fx:id="right" mnemonicParsing="false" onAction="#right" prefHeight="56.0" prefWidth="117.0" text="(" GridPane.columnIndex="1" />
-                  <Button fx:id="left" mnemonicParsing="false" onAction="#left" prefHeight="56.0" prefWidth="117.0" text=")" GridPane.columnIndex="2" />
-                  <Button fx:id="off" mnemonicParsing="false" onAction="#off" prefHeight="56.0" prefWidth="117.0" text="off" GridPane.columnIndex="3" />
-                  <Button fx:id="seven" mnemonicParsing="false" onAction="#seven" prefHeight="56.0" prefWidth="117.0" text="7" GridPane.rowIndex="1" />
-                  <Button fx:id="eight" mnemonicParsing="false" onAction="#eight" prefHeight="56.0" prefWidth="117.0" text="8" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <Button fx:id="clear" mnemonicParsing="false" onAction="#clear" prefHeight="56.0" prefWidth="117.0" text="C" />
-                  <Button fx:id="nine" mnemonicParsing="false" onAction="#nine" prefHeight="56.0" prefWidth="117.0" text="9" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                  <Button fx:id="four" mnemonicParsing="false" onAction="#four" prefHeight="56.0" prefWidth="117.0" text="4" GridPane.rowIndex="2" />
-                  <Button fx:id="five" mnemonicParsing="false" onAction="#five" prefHeight="56.0" prefWidth="117.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <Button fx:id="six" mnemonicParsing="false" onAction="#six" prefHeight="56.0" prefWidth="117.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                  <Button fx:id="divide" mnemonicParsing="false" onAction="#divide" prefHeight="56.0" prefWidth="117.0" text="÷" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                  <Button fx:id="one" mnemonicParsing="false" onAction="#one" prefHeight="56.0" prefWidth="117.0" text="1" GridPane.rowIndex="3" />
-                  <Button fx:id="two" mnemonicParsing="false" onAction="#two" prefHeight="56.0" prefWidth="117.0" text="2" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                  <Button fx:id="three" mnemonicParsing="false" onAction="#three" prefHeight="56.0" prefWidth="117.0" text="3" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                  <Button fx:id="multiply" mnemonicParsing="false" onAction="#multiply" prefHeight="56.0" prefWidth="117.0" text="X" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-                  <Button fx:id="dot" mnemonicParsing="false" onAction="#dot" prefHeight="56.0" prefWidth="117.0" text="." GridPane.rowIndex="4" />
-                  <Button fx:id="zero" mnemonicParsing="false" onAction="#zero" prefHeight="56.0" prefWidth="117.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                  <Button fx:id="minus" mnemonicParsing="false" onAction="#minus" prefHeight="56.0" prefWidth="117.0" text="-" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-                  <Button fx:id="delete" mnemonicParsing="false" onAction="#delete" prefHeight="105.0" prefWidth="234.0" text="back" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-                  <Button fx:id="plus" mnemonicParsing="false" onAction="#plus" prefHeight="105.0" prefWidth="234.0" text="+" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                  <Button fx:id="right" mnemonicParsing="false" onAction="#right" prefHeight="56.0" prefWidth="117.0" stylesheets="@fonts.css" text="(" GridPane.columnIndex="1" />
+                  <Button fx:id="left" mnemonicParsing="false" onAction="#left" prefHeight="56.0" prefWidth="117.0" stylesheets="@fonts.css" text=")" GridPane.columnIndex="2" />
+                  <Button fx:id="off" mnemonicParsing="false" onAction="#off" prefHeight="56.0" prefWidth="117.0" stylesheets="@fonts.css" text="off" GridPane.columnIndex="3" />
+                  <Button fx:id="seven" mnemonicParsing="false" onAction="#seven" prefHeight="56.0" prefWidth="117.0" stylesheets="@fonts.css" text="7" GridPane.rowIndex="1" />
+                  <Button fx:id="eight" mnemonicParsing="false" onAction="#eight" prefHeight="56.0" prefWidth="117.0" stylesheets="@fonts.css" text="8" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Button fx:id="clear" mnemonicParsing="false" onAction="#clear" prefHeight="56.0" prefWidth="117.0" stylesheets="@fonts.css" text="C" />
+                  <Button fx:id="nine" mnemonicParsing="false" onAction="#nine" prefHeight="56.0" prefWidth="117.0" stylesheets="@fonts.css" text="9" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Button fx:id="four" mnemonicParsing="false" onAction="#four" prefHeight="56.0" prefWidth="117.0" stylesheets="@fonts.css" text="4" GridPane.rowIndex="2" />
+                  <Button fx:id="five" mnemonicParsing="false" onAction="#five" prefHeight="56.0" prefWidth="117.0" stylesheets="@fonts.css" text="5" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Button fx:id="six" mnemonicParsing="false" onAction="#six" prefHeight="56.0" prefWidth="117.0" stylesheets="@fonts.css" text="6" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Button fx:id="divide" mnemonicParsing="false" onAction="#divide" prefHeight="56.0" prefWidth="117.0" stylesheets="@fonts.css" text="÷" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <Button fx:id="one" mnemonicParsing="false" onAction="#one" prefHeight="56.0" prefWidth="117.0" stylesheets="@fonts.css" text="1" GridPane.rowIndex="3" />
+                  <Button fx:id="two" mnemonicParsing="false" onAction="#two" prefHeight="56.0" prefWidth="117.0" stylesheets="@fonts.css" text="2" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Button fx:id="three" mnemonicParsing="false" onAction="#three" prefHeight="56.0" prefWidth="117.0" stylesheets="@fonts.css" text="3" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                  <Button fx:id="multiply" mnemonicParsing="false" onAction="#multiply" prefHeight="56.0" prefWidth="117.0" stylesheets="@fonts.css" text="X" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <Button fx:id="dot" mnemonicParsing="false" onAction="#dot" prefHeight="56.0" prefWidth="117.0" stylesheets="@fonts.css" text="." GridPane.rowIndex="4" />
+                  <Button fx:id="zero" mnemonicParsing="false" onAction="#zero" prefHeight="56.0" prefWidth="117.0" stylesheets="@fonts.css" text="0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <Button fx:id="minus" mnemonicParsing="false" onAction="#minus" prefHeight="56.0" prefWidth="117.0" stylesheets="@fonts.css" text="-" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                  <Button fx:id="delete" mnemonicParsing="false" onAction="#delete" prefHeight="105.0" prefWidth="234.0" stylesheets="@fonts.css" text="back" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                  <Button fx:id="plus" mnemonicParsing="false" onAction="#plus" prefHeight="105.0" prefWidth="234.0" stylesheets="@fonts.css" text="+" GridPane.columnIndex="3" GridPane.rowIndex="4" />
                </children>
+               <padding>
+                  <Insets bottom="8.0" />
+               </padding>
             </GridPane>
-            <GridPane hgap="10.0" prefHeight="68.0" prefWidth="336.0" vgap="10.0">
-              <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="187.6895294189453" minWidth="10.0" prefWidth="166.8183135986328" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="168.0" minWidth="10.0" prefWidth="75.18168640136719" />
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="168.0" minWidth="10.0" prefWidth="86.73750305175781" />
-              </columnConstraints>
-              <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-              </rowConstraints>
-               <VBox.margin>
-                  <Insets top="10.0" />
-               </VBox.margin>
-               <children>
-                  <Button fx:id="equals" mnemonicParsing="false" onAction="#equals" prefHeight="105.0" prefWidth="234.0" text="=" />
-                  <Button fx:id="L" mnemonicParsing="false" onAction="#L" prefHeight="56.0" prefWidth="117.0" text="&lt;-" GridPane.columnIndex="1" />
-                  <Button fx:id="R" mnemonicParsing="false" onAction="#R" prefHeight="56.0" prefWidth="117.0" text="-&gt;" GridPane.columnIndex="2" />
-               </children>
-            </GridPane>
+            <Button fx:id="equals" mnemonicParsing="false" onAction="#equals" prefHeight="73.0" prefWidth="336.0" stylesheets="@fonts.css" text="=" />
          </children>
          <padding>
             <Insets bottom="10.0" />

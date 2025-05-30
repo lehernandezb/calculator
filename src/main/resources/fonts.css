@@ -5,4 +5,13 @@
     -fx-font-family: "Press Start 2P";
     -fx-background-image: "";
     -fx-text-alignment: center;
+    -fx-background-color: white;
+    -fx-border-color: black;
+}
+
+.button {
+    -fx-font-size: 11;
+    -fx-font-family: "Press Start 2P";
+    -fx-background-color: white;
+    -fx-border-color: black;
 }
