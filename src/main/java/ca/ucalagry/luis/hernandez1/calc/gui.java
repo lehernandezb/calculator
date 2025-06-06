@@ -3,6 +3,7 @@ package ca.ucalagry.luis.hernandez1.calc;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -20,6 +21,7 @@ public class gui extends Application {
         scene.getStylesheets().add(css);
 
         Stage stage = new Stage();
+        stage.getIcons().add(new Image("/pokeball.png"));
         stage.setTitle("PokiCalc");
         stage.setResizable(false);
         stage.setScene(scene);
