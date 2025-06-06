@@ -101,6 +101,7 @@ public class guiController {
     @FXML
     void clear(ActionEvent event) {
         display.clear();
+        sum.clear();
     }
 
     @FXML
